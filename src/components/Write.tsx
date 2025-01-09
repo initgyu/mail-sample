@@ -23,9 +23,10 @@ const Write: React.FC<WriteProps> = ({ selectedMail }) => {
   );
 
   return (
-    <div>
-      <h1>메일 작성</h1>
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">메일 작성</h1>
       <textarea
+        className="w-full p-2 border rounded mb-4"
         placeholder="답장 내용을 입력하세요..."
         rows={10}
         cols={50}
@@ -33,8 +34,13 @@ const Write: React.FC<WriteProps> = ({ selectedMail }) => {
         onChange={(e) => setReplyContent(e.target.value)}
       ></textarea>
       <br />
-      <button>보내기</button>
-      <button onClick={() => navigate("/")}>이전</button>
+      <button className="btn btn-primary bg-blue-500 text-white px-4 py-2 rounded mr-2">보내기</button>
+      <button
+        className="btn btn-secondary bg-gray-500 text-white px-4 py-2 rounded"
+        onClick={() => navigate("/")}
+      >
+        이전
+      </button>
     </div>
   );
 };

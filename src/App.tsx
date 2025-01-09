@@ -53,6 +53,7 @@ const App: React.FC = () => {
                 />
                 <Mail mails={mails} setMails={setMails} />
               </>
+              
             }
           />
           <Route path="/write" element={<Write selectedMail={selectedMail} />} />
