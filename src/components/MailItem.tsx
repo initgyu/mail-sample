@@ -25,8 +25,9 @@ const MailItem: React.FC<MailItemProps> = ({ mail, onCheck }) => {
       />
       <div className="mail-content flex-1 flex items-center space-x-4">
         <div className="mail-sender font-bold">작성자: {mail.sender}</div>
-        <div className="mail-date text-gray-500">{mail.date}</div>
         <div className="mail-snippet">내용: {mail.content}</div>
+        <div className="mail-date text-gray-500">{mail.date}</div>
+
       </div>
     </div>
   );

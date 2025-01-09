@@ -35,6 +35,7 @@ const App: React.FC = () => {
   const handleDelete = () => {
     setMails(mails.filter(mail => !mail.isChecked));
   };
+
   const selectedMail = mails.find(mail => mail.isChecked) || null;
 
   return (
@@ -53,7 +54,6 @@ const App: React.FC = () => {
                 />
                 <Mail mails={mails} setMails={setMails} />
               </>
-              
             }
           />
           <Route path="/write" element={<Write selectedMail={selectedMail} />} />
