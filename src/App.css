@@ -1,0 +1,23 @@
+.app {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .mail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .mail-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
