@@ -15,6 +15,8 @@ interface MailItemProps {
 }
 
 const MailItem: React.FC<MailItemProps> = ({ mail, onCheck }) => {
+  const textColor = mail.isRead ? "text-gray-500" : "text-black";
+
   return (
     <div className="mail-item flex items-center space-x-4 p-4 border-b">
       <input
@@ -23,11 +25,10 @@ const MailItem: React.FC<MailItemProps> = ({ mail, onCheck }) => {
         onChange={(e) => onCheck(mail.id, e.target.checked)}
         className="form-checkbox h-5 w-5 text-blue-600"
       />
-      <div className="mail-content flex-1 flex items-center space-x-4">
+      <div className={`mail-content flex-1 flex items-center space-x-4 ${textColor}`}>
         <div className="mail-sender font-bold">작성자: {mail.sender}</div>
         <div className="mail-snippet">내용: {mail.content}</div>
         <div className="mail-date text-gray-500">{mail.date}</div>
-
       </div>
     </div>
   );
