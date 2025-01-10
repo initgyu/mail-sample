@@ -1,0 +1,52 @@
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.active .page-link {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.disabled .page-link {
+    color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.first-page-button,
+.last-page-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #007bff;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.first-page-button:disabled,
+.last-page-button:disabled {
+    color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
